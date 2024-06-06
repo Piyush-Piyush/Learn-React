@@ -26,7 +26,7 @@ const reactElement = React.createElement(       // Note: It has its fixed way of
   'a',
   {href:'https://google.com', target:'_blank'},
   'click me to visit google',
-  username                    // If we want to add evaluated expression then is injected after creation of whole tree.
+  username                    // Evaluated Expression - If we want to add evaluated expression then is injected after creation of whole tree.
 
 )
 
