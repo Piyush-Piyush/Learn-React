@@ -15,7 +15,7 @@ function customRender(reactElement, container){
     domElement.innerHTML = reactElement.children
 
     for(const prop in reactElement.props){
-        if(prop === 'children') continue;        // This line was use earlier because earlier the children was included in the props         
+        if(prop === 'children') continue;       // This line was use earlier because earlier the children was included in the props         
         domElement.setAttribute(prop,reactElement.props[prop])
     }
     container.appendChild(domElement)
