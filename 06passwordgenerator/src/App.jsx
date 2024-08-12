@@ -26,11 +26,11 @@ function App() {
     setPassword(pass)
   }, [length, numberAllowed, charAllowed, setPassword]); // We can pass the function that we have to memoize and dependencies(vaiables and functions)in array on which calling of this function depends.
 
-const copyPasswordToClipboard = useCallback(() => {
-  passwordref.current?.select();
-  // passwordref.current?.setSelectionRange(0,3);  //Just to select in range.
-  window.navigator.clipboard.writeText(password);
-}, [password])
+  const copyPasswordToClipboard = useCallback(() => {
+    passwordref.current?.select();
+    // passwordref.current?.setSelectionRange(0,3);  //Just to select in range.
+    window.navigator.clipboard.writeText(password);
+  }, [password])
 
   useEffect(() => {
     passwordGenerator()
@@ -51,12 +51,12 @@ const copyPasswordToClipboard = useCallback(() => {
           />
 
           <button
-          onClick={copyPasswordToClipboard}
-          className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0">
+            onClick={copyPasswordToClipboard}
+            className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0">
             copy
           </button>
         </div>
-        
+
         <div className="flex text-sm gap-x-2">
           <div className=" flex items-center gap-x-1">
             <input
@@ -100,7 +100,7 @@ const copyPasswordToClipboard = useCallback(() => {
             <label htmlFor="charAllowed">Characters</label>
           </div>
 
-          
+
         </div>
       </div>
     </>
